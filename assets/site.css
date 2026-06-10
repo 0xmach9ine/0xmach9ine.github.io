@@ -1,0 +1,447 @@
+﻿/* Fira Code: https://github.com/tonsky/FiraCode */
+@import url('https://cdn.staticdelivr.com/gfonts/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+  --background: #1a170f;
+  --foreground: #eceae5;
+  --accent: #eec35e;
+  --radius: 0;
+  --font-size: 1rem;
+  --line-height: 1.54em;
+  --panel: color-mix(in srgb, var(--foreground) 4%, transparent);
+  --panel-strong: color-mix(in srgb, var(--foreground) 7%, transparent);
+  --border: color-mix(in srgb, var(--foreground) 24%, transparent);
+}
+
+html {
+  box-sizing: border-box;
+  background: var(--background);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Fira Code",
+    "JetBrains Mono",
+    Monaco,
+    Consolas,
+    "Ubuntu Mono",
+    monospace;
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: var(--line-height);
+  background: var(--background);
+  color: var(--foreground);
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: contextual;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: calc(var(--font-size) * 1.45);
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: calc(var(--font-size) * 1.35);
+  letter-spacing: 0;
+}
+
+h3 {
+  font-size: calc(var(--font-size) * 1.15);
+  letter-spacing: 0;
+}
+
+h4,
+h5,
+h6 {
+  font-size: calc(var(--font-size) * 1);
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+img,
+figure,
+video,
+table {
+  margin: 25px 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent) 82%, white);
+}
+
+a:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.site-header,
+.site-footer {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--foreground);
+  font-size: 1.35rem;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  color: var(--foreground);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+main {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+.intro {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 100vw;
+  max-width: none;
+  min-height: 380px;
+  margin: 0 0 52px calc(50% - 50vw);
+  padding: 32px;
+  border: none;
+  background:
+    linear-gradient(180deg, rgba(26, 23, 15, 0.38), rgba(26, 23, 15, 0.82)),
+    url("/assets/media/hero-cogito-enhanced.png") center center / cover no-repeat;
+}
+
+.eyebrow,
+.post-label {
+  color: color-mix(in srgb, var(--foreground) 70%, var(--accent));
+  font-size: 0.83rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.intro h1 {
+  margin: 12px 0 0;
+  font-size: clamp(2.05rem, 5vw, 4.05rem);
+  max-width: 18ch;
+}
+
+.intro > * {
+  position: relative;
+  z-index: 1;
+}
+
+.intro .eyebrow {
+  color: var(--foreground);
+  font-size: clamp(1.45rem, 4vw, 2.65rem);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.78);
+}
+
+.post-list {
+  display: grid;
+  gap: 14px;
+  padding: 0 0 72px;
+}
+
+.post-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.post-card a {
+  display: block;
+  padding: 22px;
+  text-decoration: none;
+}
+
+.post-card h2 {
+  margin: 8px 0 0;
+  font-size: clamp(1.2rem, 2.7vw, 1.85rem);
+}
+
+.post-card:hover {
+  background: var(--panel-strong);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.post {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 60px 0 86px;
+}
+
+.about-template .post {
+  max-width: 740px;
+}
+
+.post-header {
+  margin-bottom: 34px;
+}
+
+.post-header h1 {
+  margin: 8px 0 0;
+  font-size: clamp(1.95rem, 5vw, 3.8rem);
+}
+
+.post-content {
+  font-size: 1.08rem;
+  line-height: 1.68;
+  text-align: left;
+}
+
+.post-content h2 {
+  margin-top: 2.4em;
+  font-size: 1.45rem;
+}
+
+.post-content h3 {
+  margin-top: 2em;
+  font-size: 1.15rem;
+}
+
+.post-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 8px solid var(--accent);
+  border-radius: 0;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content blockquote {
+  max-width: 82ch;
+}
+
+.post-content figure {
+  margin: 2rem 0;
+}
+
+.post-content figcaption {
+  margin-top: 0.65rem;
+  color: var(--background);
+  background: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.35rem 0.75rem;
+}
+
+.post-content figcaption a,
+.post-content figcaption span {
+  color: var(--background);
+}
+
+.post-content blockquote {
+  position: relative;
+  margin: 0;
+  padding: 25px;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  color: var(--foreground);
+}
+
+.post-content blockquote:before {
+  content: ">";
+  display: block;
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.post-content code,
+.post-content kbd {
+  font-family:
+    "Fira Code",
+    "JetBrains Mono",
+    Monaco,
+    Consolas,
+    "Ubuntu Mono",
+    monospace !important;
+  font-feature-settings: normal;
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  color: color-mix(in srgb, var(--foreground) 5%, var(--accent));
+  padding: 0 6px;
+  margin: 0 2px;
+  font-size: 0.95em;
+}
+
+.post-content code {
+  border: 1px solid color-mix(in srgb, var(--foreground) 25%, transparent);
+}
+
+.post-content pre {
+  tab-size: 4;
+  background: color-mix(in srgb, var(--foreground) 5%, transparent) !important;
+  color: color-mix(in srgb, var(--foreground) 5%, var(--accent));
+  padding: 20px 10px;
+  font-size: 0.95em !important;
+  overflow: auto;
+  border-radius: 0;
+  border: 1px solid color-mix(in srgb, var(--foreground) 25%, transparent);
+}
+
+.post-content pre code {
+  background: none !important;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  border: none;
+}
+
+.kg-bookmark-card {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--panel);
+}
+
+.kg-bookmark-container {
+  display: block;
+  padding: 18px;
+  text-decoration: none;
+}
+
+.kg-bookmark-title {
+  font-weight: 700;
+}
+
+.kg-bookmark-description,
+.kg-bookmark-metadata {
+  margin-top: 6px;
+  color: var(--foreground);
+  font-size: 0.92rem;
+}
+
+.kg-bookmark-thumbnail,
+.kg-bookmark-icon {
+  display: none;
+}
+
+ul,
+ol {
+  margin-left: 4ch;
+  padding: 0;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 2px solid var(--foreground);
+  padding: 10px;
+}
+
+th {
+  color: var(--foreground);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  background: var(--accent);
+  height: 2px;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .intro {
+    min-height: 260px;
+    padding: 22px;
+    margin-bottom: 34px;
+  }
+
+  .post {
+    padding-top: 42px;
+  }
+
+  .site-header,
+  main {
+    width: min(100% - 24px, 1040px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
