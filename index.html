@@ -10,25 +10,33 @@
 </head>
 <body class="">
   <header class="site-header">
-    <a class="brand" href="/">Lalith Nayan</a>
-    <nav aria-label="Main navigation">
+    <a class="brand" href="/">LALITH NAYAN</a>
+    <nav class="site-nav" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/about/">About</a>
+      <button class="search-toggle" type="button" aria-expanded="false" aria-controls="site-search" aria-label="Search">
+        <span aria-hidden="true">search</span>
+      </button>
     </nav>
+    <section class="site-search" id="site-search" hidden>
+      <label for="search-input">Search</label>
+      <input id="search-input" type="search" autocomplete="off" placeholder="Search posts or tags">
+      <div class="search-results" id="search-results" aria-live="polite"></div>
+    </section>
   </header>
   <main>
     <section class="intro">
       <p class="eyebrow">Cogito, ergo sum</p>
     </section>
     <section class="post-list" aria-label="Articles">
-      <article class="post-card">
-        <a href="/k8s-lan-party-challenge/">
-          <p class="post-label">CTF WRITEUP</p>
-          <h2>K8s Lan Party Challenge</h2>
-        </a>
-      </article>
+      <h2 class="section-title">Latest</h2>
+      <a class="latest-post" href="/k8s-lan-party-challenge/">
+        <span class="post-row-title">K8s Lan Party Challenge</span>
+        <span class="post-row-tags">CTF WRITEUP / KUBERNETES</span>
+      </a>
     </section>
   </main>
+  <script src="/assets/search.js"></script>
 </body>
 </html>
 
